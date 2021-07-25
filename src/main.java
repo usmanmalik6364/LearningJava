@@ -1,3 +1,5 @@
+import BankingApplication.Bank;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,9 +29,23 @@ public class main {
 //        Ceiling ceiling = new Ceiling(12,55);
 //        Bed bed = new Bed("Modern", 4,3,2,1);
 //
-        int [] myArray = {0,1,2,3,4};
-        reverse(myArray);
-}
+        Bank bank = new Bank("National Australia Bank");
+        bank.addBranch("Adelaide");
+        bank.addCustomer("Adelaide","Usman",50.05);
+        bank.addCustomer("Adelaide","Tom",5);
+        bank.addCustomer("Adelaide","Mike",10);
+
+        bank.addBranch("Sydney");
+        bank.addCustomer("Sydney","Bob",150);
+        bank.addCustomerTransaction("Adelaide","Usman",10);
+        bank.addCustomerTransaction("Adelaide","Usman",10);
+        bank.addCustomerTransaction("Adelaide","Usman",10);
+        bank.addCustomerTransaction("Adelaide","Mike",10);
+        bank.listCustomers("Adelaide",true);
+
+
+
+    }
 
     private static void reverse(int[] myArray){
         System.out.println("Array = " + Arrays.toString(myArray));
